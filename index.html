@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My only love</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: url('https://wallpapers.com/images/hd/romantic-couple-pictures-5qs1j4lw46pmrm23.jpg') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #modalOverlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 0.5s, visibility 0.5s;
+        }
+        #modalOverlay1 {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 0.5s, visibility 0.5s;
+        }
+
+        #loveMessage {
+            text-align: center;
+            font-size: 24px;
+            color: white;
+            font-weight: bold;
+        }
+
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        #heart {
+            color: #e74c3c;
+            font-size: 36px;
+            display: inline-block;
+            animation: heartbeat 1s infinite;
+        }
+
+        #modalOverlay.show {
+            visibility: visible;
+            opacity: 1;
+        }
+        
+        #modalOverlay1.show {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        #valentineButton {
+            background-color: #e74c3c;
+            color: white;
+            font-size: 16px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: -330px;
+            margin-right: 10px;
+        }
+
+        #valentineButton:hover {
+            background-color: #d63a2f;
+        }
+    </style>
+</head>
+<body>
+    <button id="valentineButton" onclick="showLoveModal()">Click here my love</button>
+    <button id="valentineButton" onclick="showLoveModal1()">Click here also</button>
+
+    <div id="modalOverlay" onclick="hideLoveModal()">
+        <div id="loveMessage">
+            I <span id="heart">❤</span> You Baby Lynn
+        </div>
+    </div>
+    
+    <div id="modalOverlay1" onclick="hideLoveModal1()">
+        <div id="loveMessage">
+            You are best thing that happened to me. Let's live a beautiful life together.
+        </div>
+    </div>
+
+    <script>
+        function showLoveModal() {
+            document.getElementById('modalOverlay').classList.add('show');
+        }
+
+        function hideLoveModal() {
+            document.getElementById('modalOverlay').classList.remove('show');
+        }
+
+        function showLoveModal1() {
+            document.getElementById('modalOverlay1').classList.add('show');
+        }
+
+        function hideLoveModal1() {
+            document.getElementById('modalOverlay1').classList.remove('show');
+        }
+    </script>
+</body>
+</html>
